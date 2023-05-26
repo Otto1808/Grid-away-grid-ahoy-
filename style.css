@@ -1,18 +1,19 @@
 body{
     background-color: rgb(237, 234, 234);
     margin: 5%;
+    margin-left: 2%;
 }
 
 .grid-container{
     display: grid;
     width: 100%;
     grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 50% 50%;
-    row-gap: 20px;
+    grid-template-rows: repeat(auto);
+    gap: 20px;
+    
 }
 .grid-card{ 
     text-align: center;
-    height: 350px;
     width: 80%;
     border: 1px white solid;
     border-radius: 10px;    
@@ -20,9 +21,9 @@ body{
     background-color: white;
 }
 img{
-    height: 15%;
-    width: 15%;
-    margin: 5%;
+    height: 20%;
+    width: 20%;
+    margin: 1%;
 }
 h1{
     font-size: 18px;
@@ -63,5 +64,13 @@ button:hover{
         display: grid;
         grid-template-columns: 50% 50%;
         grid-template-rows: repeat(auto);
+    }
+}
+@media only screen and (max-width: 650px){
+    .grid-container{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(auto);
+        column-gap: 0;
     }
 }
